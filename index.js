@@ -59,6 +59,7 @@ app.get('/api/books/:id', (req, res) => {
   }
 })
 
+// создать книгу
 app.post('/api/books', (req, res) => {
   const { book } = stor
   const {
@@ -81,6 +82,7 @@ app.post('/api/books', (req, res) => {
   res.json(newBook)
 })
 
+// редактировать книгу по ID
 app.put('/api/books/:id', (req, res) => {
   const { book } = stor
   const {
@@ -112,6 +114,7 @@ app.put('/api/books/:id', (req, res) => {
   }
 })
 
+// удалить книгу по ID
 app.delete('/api/books/:id', (req, res) => {
   const { book } = stor
   const { id } = req.params
